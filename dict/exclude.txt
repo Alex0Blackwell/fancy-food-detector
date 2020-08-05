@@ -1,0 +1,10 @@
+plate
+restaurant
+spoon
+fork
+knife
+ladle
+wooden_spoon
+hot_pot
+soup_bowl
+wok
