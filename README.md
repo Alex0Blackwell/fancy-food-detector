@@ -25,6 +25,7 @@ The bot uses machine learning image recognition to determine what ingredients ma
 - **OpenCV 4.3.0**
 - **Tensorflow 2.3**
 - **ImageAI 2.15**
+- **Spoonacular API**
 
 ## Setup
 
