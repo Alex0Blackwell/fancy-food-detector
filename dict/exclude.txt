@@ -8,3 +8,9 @@ wooden_spoon
 hot_pot
 soup_bowl
 wok
+pan
+frying_pan
+spatula
+glass
+tray
+Dutch_oven

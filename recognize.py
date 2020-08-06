@@ -4,6 +4,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # restrict tensorflow debugging info
 from imageai.Prediction import ImagePrediction
 import time as t
 import spoonacular as sp
+import json
 
 
 def waitAnim():
@@ -15,7 +16,12 @@ def waitAnim():
 
 
 def main():
-    api = sp.API("c8f0c0fe4ae24f2e82618b374dbede8d")
+    f = open('settings.json',)
+    data = json.load(f)
+
+    photoRef = data["Photo_Reference"];
+
+    api = sp.API(data["API_Key"])
 
     print("Nice meal! I think that the following ingredients may be in the meal:")
 
@@ -26,7 +32,7 @@ def main():
 
 
     try:
-        predictions, percentage_probabilities = prediction.predictImage("./images/meal3.jpg", result_count=5)
+        predictions, percentage_probabilities = prediction.predictImage("./images/"+photoRef, result_count=8)
     except Exception as e:
         print("Oops that didn't work :(\nMake sure you are referencing the file properly.")
 
